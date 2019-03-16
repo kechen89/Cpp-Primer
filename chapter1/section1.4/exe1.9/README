@@ -1,0 +1,5 @@
+1. compile
+$ g++ -o main main.C
+
+2. execute
+$ ./main
