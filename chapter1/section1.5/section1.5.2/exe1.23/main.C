@@ -14,7 +14,7 @@ int main()
             ++cnt;
             else                  // otherwise, print the count for the previous value
             {
-                std::cout << currItem << " occurs "
+                std::cout << currItem.isbn() << " occurs "
                 << cnt << " times" << std::endl;
                 currItem = item;    // remember the new value
                 cnt = 1;      // reset the counter
