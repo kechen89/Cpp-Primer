@@ -11,7 +11,7 @@ int main()
         while (std::cin >> item)   // read the remaining items
         {
             if (item.isbn() == currItem.isbn())   // if the values are the same
-            ++cnt;
+                ++cnt;
             else                  // otherwise, print the count for the previous value
             {
                 std::cout << currItem.isbn() << " occurs "
