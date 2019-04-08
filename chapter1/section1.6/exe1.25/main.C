@@ -23,12 +23,12 @@ int main()
             }
         }
         std::cout << total << std::endl;  // print the last transaction
-        
     }
     else
     {
         // no input! warn the user
         std::cerr << "No data?!" << std::endl;
+        return -1;   // indicate failure
     }
     
     return 0;
