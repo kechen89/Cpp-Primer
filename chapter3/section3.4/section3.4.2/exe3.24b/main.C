@@ -17,7 +17,11 @@ int main(){
     
     cout << "The sum of first and last elements, sum of the second and second-to-last, ..., is:" << endl;
     
-    for (auto it = ivec.begin(); it != (ivec.begin() + ivec.end())/2; ++it){
-        cout << *it + *(ivec.end() - 1 - it) << endl;
+    auto beg = ivec.begin(), end = ivec.end();
+    auto mid = ivec.begin() + (end - beg + 1)/2;
+    
+    for (auto it = ivec.begin(); it != mid; ++it){
+        auto it2 = beg + (end - it - 1);
+        cout << *it + *(it2) << endl;
     }
 }
