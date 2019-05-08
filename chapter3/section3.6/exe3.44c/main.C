@@ -12,7 +12,9 @@ int main()
         {8, 9, 10, 11}
     };
     
-    for (int (*p)[4] = std::begin(ia); p != std::end(ia); ++p)   // ia is actually &ia[0], the address of the first element of ia, which is an array of four ints
+    using int_array = int[4];
+    
+    for (int_array *p = std::begin(ia); p != std::end(ia); ++p)   // ia is actually &ia[0], the address of the first element of ia, which is an array of four ints
                                                                  // p points to an array of four ints
         for (int *q = std::begin(*p); q != std::end(*p); ++q)
         cout << *q << " ";
