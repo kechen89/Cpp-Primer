@@ -10,13 +10,11 @@ int main()
     char cval;
     float fval;
     double dval;
+    unsigned int ui;
     
-    // (b)
-    cout << typeid(fval).name() << endl;
-    cout << typeid(ival).name() << endl;
+    // (a)
+    cout << typeid('a' + 3).name() << endl;
     cout << typeid(fval + ival).name() << endl;
-    dval = fval + ival;
-    cout << typeid(dval).name() << endl;
     
     // (c)
     cout << typeid(ival).name() << endl;
