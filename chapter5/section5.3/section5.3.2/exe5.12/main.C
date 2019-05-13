@@ -6,8 +6,8 @@ using std::endl;
 
 int main ()
 {
-    unsigned aCnt = 0, eCnt = 0, iCnt = 0, oCnt = 0, uCnt = 0, bsCnt = 0, tabCnt = 0, nlCnt = 0;
-    char ch;
+    unsigned aCnt = 0, eCnt = 0, iCnt = 0, oCnt = 0, uCnt = 0, bsCnt = 0, tabCnt = 0, nlCnt = 0, ffCnt = 0, flCnt = 0, fiCnt = 0;
+    char ch, ch_old;
     
     while (cin >> std::noskipws >> ch) {
         // if ch is a vowel or white space increment the appropriate counter
@@ -18,7 +18,10 @@ int main ()
             case 'e': case 'E':
                 ++eCnt;
                 break;
-            case 'i': case 'I':
+            case 'i':
+                if (ch_old == 'f')
+                    ++fiCnt;
+            case 'I':
                 ++iCnt;
                 break;
             case 'o': case 'O':
@@ -36,7 +39,16 @@ int main ()
             case '\n':
                 ++nlCnt;
                 break;
+            case 'f':
+                if (ch_old == 'f')
+                    ++ffCnt;
+                break;
+            case 'l':
+                if (ch_old == 'f')
+                    ++flCnt;
+                break;
         }
+        ch_old = ch;
     }
     
     // print results
@@ -47,7 +59,10 @@ int main ()
          << "Number of vowel u: \t" << uCnt << '\n'
          << "Number of blank space: \t" << bsCnt << '\n'
          << "Number of tabs: \t" << tabCnt << '\n'
-         << "Number of newlines: \t" << nlCnt <<  endl;
+         << "Number of newlines: \t" << nlCnt << '\n'
+         << "Number of ff: \t" << ffCnt << '\n'
+         << "Number of fl: \t" << flCnt << '\n'
+    << "Number of fi: \t" << fiCnt << endl;
     
     return 0;
     
