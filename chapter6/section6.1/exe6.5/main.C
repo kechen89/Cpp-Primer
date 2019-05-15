@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 using std::cin;
 using std::cout;
@@ -23,5 +22,5 @@ int main ()
 
 double absolute(double val)
 {
-    return std::abs(val);
+    return (val >= 0) ? val : -val;
 }
