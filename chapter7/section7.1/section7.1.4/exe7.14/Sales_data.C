@@ -4,11 +4,7 @@
 
 int main()
 {
-    //Sales_data total;  // default constructor
-    
-    //Sales_data total(" "); // constructor
-    
-    Sales_data total(" ", 0, 0.0); // constructor
+    Sales_data total;  // default constructor
     
     if (read(std::cin, total))
     {
