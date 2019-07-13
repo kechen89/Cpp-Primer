@@ -3,13 +3,17 @@
 
 #include <string>
 
+struct Sales_data;
+std::istream &read(std::istream &is, Sales_data &item);
+
 struct Sales_data
 {
     //constructor
     Sales_data() = default;
     Sales_data(const std::string &s):bookNo(s) {}
     Sales_data(const std::string &s, unsigned n, double p):bookNo(s), units_sold(n), revenue(p*n) {}
-    Sales_data(std::istream &);  // Constructor can be declared inside class but defined outside class 
+    Sales_data(std::istream &is) { read(is, *this); }
+
     
     //member functions
     std::string isbn() const { return bookNo; }  // defined
@@ -22,14 +26,6 @@ struct Sales_data
     double revenue = 0.0;
 };
 
-//declaration
-std::istream &read(std::istream &is, Sales_data &item);
-
-// Define a constructor outside the class body
-Sales_data::Sales_data(std::istream &is)
-{
-    read(is, *this);   // read will read a transaction from is into this object
-}
 
 //member function defined
 double Sales_data::avg_price() const
