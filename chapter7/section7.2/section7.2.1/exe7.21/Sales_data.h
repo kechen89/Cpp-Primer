@@ -1,6 +1,7 @@
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
 
+#include <iostream>
 #include <string>
 
 class Sales_data
@@ -9,7 +10,6 @@ class Sales_data
 friend Sales_data add(const Sales_data &lhs, const Sales_data &rhs);
 friend std::istream &read(std::istream &is, Sales_data &item);
 friend std::ostream &print(std::ostream &os, const Sales_data &item);
-    
     
 public:
     //constructor
