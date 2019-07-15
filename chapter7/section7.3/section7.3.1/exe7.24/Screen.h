@@ -8,7 +8,7 @@ class Screen
 public:
     typedef std::string::size_type pos;
     Screen() = default;      // needed because Screen has another constructor
-    Screen(pos ht, pos wd): height(ht), width(wd), contents(ht * wd, "") {}
+    Screen(pos ht, pos wd): height(ht), width(wd), contents(ht * wd, ' ') {}
     Screen(pos ht, pos wd, char c): height(ht), width(wd), contents(ht * wd, c) {}
     
     char get() const                 // get the character at the cursor
