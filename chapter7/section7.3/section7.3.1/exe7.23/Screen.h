@@ -1,5 +1,5 @@
-#ifndef PERSON_H
-#define PERSON_H
+#ifndef SCREEN_H
+#define SCREEN_H
 
 #include <string>
 #include <iostream>
