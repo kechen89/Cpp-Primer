@@ -4,7 +4,10 @@
 #include <string>
 #include <iostream>
 
-class Person;
+class Person;   // class declaration (forward declaration)
+// after a declaration and before a definition, type Person is an incomplete type
+// we can use an incomplete type in only limited ways: we can define pointers or references to such types
+// and wew can declare (but not define) functions that use an incomplete type as a parameter or return type
 std::istream &read(std::istream &is, Person &p);
 
 class Person
