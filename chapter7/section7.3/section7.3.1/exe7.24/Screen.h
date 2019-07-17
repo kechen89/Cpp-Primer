@@ -12,7 +12,7 @@ public:
     Screen(pos ht, pos wd, char c): height(ht), width(wd), contents(ht * wd, c) {}
     
     char get() const                 // get the character at the cursor
-    { return contest[cursor];}       // implicitly inline
+    { return contents[cursor];}       // implicitly inline
     
     inline char get(pos r, pos c) const;  // explicitly inline
     Screen &move(pos r, pos c);     // can be made inline later
