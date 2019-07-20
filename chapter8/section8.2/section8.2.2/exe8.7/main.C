@@ -25,7 +25,7 @@ int main(int argc, char **argv)
     else
     {
         ifstream in(argv[1]);
-        ofstream out(argv[2], ofstream::app);
+        ofstream out(argv[2]);
         
         if (in >> total.bookNo >> total.units_sold >> price)
         {
