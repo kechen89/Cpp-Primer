@@ -23,13 +23,13 @@ int main(int argc, char **argv)
         {
             text.push_back(str);
         }
-    }
-    
-    for (auto line : text)
-    {
-        istringstream is(line);
-        while(is >> word)
-            cout << word << endl;
+        
+        for (auto line : text)
+        {
+            istringstream is(line);
+            while(is >> word)
+                cout << word << endl;
+        }
     }
     
     return 0;
