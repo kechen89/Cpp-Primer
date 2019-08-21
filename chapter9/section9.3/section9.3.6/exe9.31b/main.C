@@ -8,22 +8,22 @@ using namespace std;
 
 int main()
 {
-    list<int> vl = {0,1,2,3,4,5,6,7,8,9};
-    auto iter = vl.begin();
+    list<int> li = {0,1,2,3,4,5,6,7,8,9};
+    auto iter = li.begin();
     
-    while (iter != vl.end())
+    while (iter != li.end())
     {
         if (*iter % 2)
         {
-            iter = vl.insert(iter, *iter);
+            iter = li.insert(iter, *iter);
             ++iter;
             ++iter;
         }
         else
-            iter = vl.erase(iter);
+            iter = li.erase(iter);
     }
     
-    for (auto i : vl)
+    for (auto i : li)
         cout << i << endl;
     
     return 0;
