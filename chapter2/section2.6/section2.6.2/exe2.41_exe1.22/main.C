@@ -16,11 +16,9 @@ int main()
 
     std::cout << "Input data: 'ISBN' 'Number of copies sold' 'Sales price'" << std::endl;
     
-    if (std::cin >> data.bookNo >> data.units_sold >> price)
+    if (std::cin >> data_sum.bookNo >> data_sum.units_sold >> price)
     {
-        data.revenue = data.units_sold * price;
-        
-        data_sum = data;
+        data_sum.revenue = data_sum.units_sold * price;
         
         std::cout << "Input next data: 'ISBN' 'Number of copies sold' 'Sales price'" << std::endl;
         
