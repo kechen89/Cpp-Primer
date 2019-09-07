@@ -6,7 +6,7 @@ using std::vector;
 
 int main(){
 
-    vector<int > ivec;
+    vector<int> ivec;
     
     int i;
     
