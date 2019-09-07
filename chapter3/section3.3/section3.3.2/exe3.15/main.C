@@ -8,7 +8,7 @@ using std::vector;
 int main(){
 
     string word;
-    vector<string > text;
+    vector<string> text;
 
     
     while(cin >> word) {
