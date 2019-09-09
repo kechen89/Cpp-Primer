@@ -17,7 +17,7 @@ int main(){
     
     cout << "The sum of each pair of adjacent elements is:" << endl;
     
-    for (auto it = ivec.begin(); it != ivec.end() - 1; ++it){
+    for (auto it = ivec.cbegin(); it != ivec.cend() - 1; ++it){
         cout << *it + *(it + 1) << endl;
     }
 }
