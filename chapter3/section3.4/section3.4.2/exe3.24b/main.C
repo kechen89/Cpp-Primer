@@ -11,17 +11,15 @@ int main(){
     int i;
     vector<int> ivec;
     
+    cout << "Enter integer numbers " << endl;
+    
     while(cin >> i) {
         ivec.push_back(i);
     }
     
     cout << "The sum of first and last elements, sum of the second and second-to-last, ..., is:" << endl;
     
-    auto beg = ivec.begin(), end = ivec.end();
-    auto mid = ivec.begin() + (end - beg + 1)/2;
-    
-    for (auto it = ivec.begin(); it != mid; ++it){
-        auto it2 = beg + (end - it - 1);
-        cout << *it + *(it2) << endl;
-    }
+    for (auto beg = ivec.cbegin(), end = ivec.cend(); beg < end; ++beg, --end)
+        cout << *beg + *(end - 1) << " ";
+    cout << endl;
 }
