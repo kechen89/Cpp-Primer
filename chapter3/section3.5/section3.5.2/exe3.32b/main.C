@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include <vector>
 
 using std::cin;
@@ -14,9 +13,10 @@ int main(){
     for (vector<int>::size_type ix = 0; ix != ia.size(); ++ix)
         ia[ix] = ix;
     
-    for (vector<int>::size_type ix = 0; ix != ib.size(); ++ix) {
-        ib[ix] = ia[ix];
-        cout << ib[ix] << endl;
-    }
+    ib = ia;
+    
+    for (auto i : ib)
+        cout << i << " ";
+    cout << endl;
     
 }
