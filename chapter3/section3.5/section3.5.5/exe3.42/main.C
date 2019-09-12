@@ -13,10 +13,8 @@ int main()
     vector<int> ivec{0, 1, 2, 3, 4, 5};
     
     int arr[6];
-
-    vector<int>::size_type sz= ivec.size();
     
-    for (vector<int>::size_type i = 0; i!= sz; ++i){
+    for (vector<int>::size_type i = 0; i!= ivec.size(); ++i){
         arr[i] = ivec[i];
         cout << arr[i] << " ";
     }
