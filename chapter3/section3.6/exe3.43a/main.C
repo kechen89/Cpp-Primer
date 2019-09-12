@@ -12,8 +12,8 @@ int main()
         {8, 9, 10, 11}
     };
     
-    for (int (&i)[4] : ia)
-        for (int j : i)
+    for (const int (&i)[4] : ia)
+        for (const int j : i)
         cout << j << " ";
     cout << endl;
     
