@@ -9,7 +9,9 @@ int main()
     
     int *const p2 = &i;
 
-    const int *const p3 = &i; // error: default initialization of an object of const type 'const int *const'
+    //const int *const p3; // error: default initialization of an object of const type 'const int *const'
+    
+    const int *const p3 = &i;
 
     //(a)
     i = ic;  // legal
@@ -27,5 +29,5 @@ int main()
     //p2 = p1;   // error:  main.C:27:8: error: cannot assign to variable 'p2' with const-qualified type 'int *const'
     
     //(f)
-    ic = *p3;    // error: error: cannot assign to variable 'ic' with const-qualified type 'const int'
+    //ic = *p3;    // error: error: cannot assign to variable 'ic' with const-qualified type 'const int'
 }
